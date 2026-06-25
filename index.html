@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="en"><head>
+  
+  
+  <meta charset="UTF-8">
+  <title>Build a Puzzle Piece Connect Hover (Source Code)</title>
+  <style>
+    body { background: #fdf2f8; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;}
+    
+    .puzzle-grid {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      cursor: pointer;
+    }
+    
+    .piece {
+      position: absolute;
+      width: 100px; height: 100px;
+      background: #ec4899;
+      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    /* The 4 Quadrants */
+    .top-left { top: -15px; left: -15px; background: #ec4899; border-radius: 10px 0 0 0; }
+    .top-right { top: -15px; left: 115px; background: #db2777; border-radius: 0 10px 0 0; }
+    .btm-left { top: 115px; left: -15px; background: #f472b6; border-radius: 0 0 0 10px; }
+    .btm-right { top: 115px; left: 115px; background: #be185d; border-radius: 0 0 10px 0;}
+    
+    /* Real puzzle pieces use clip-path to make the nubs, but for this geometric example, we simply use separated offset boxes that snap perfectly into a seamless grid. */
+    
+    .puzzle-grid:hover .top-left { transform: translate(15px, 15px); }
+    .puzzle-grid:hover .top-right { transform: translate(-15px, 15px); }
+    .puzzle-grid:hover .btm-left { transform: translate(15px, -15px); }
+    .puzzle-grid:hover .btm-right { transform: translate(-15px, -15px); }
+    
+    .icon {
+      position: absolute; inset: 0; color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; opacity: 0; transition: opacity 0.5s; z-index: 10;
+    }
+    .puzzle-grid:hover .icon { opacity: 1; transition-delay: 0.3s;}
+  </style>
+
+            <meta name="description" content="A beautiful component imported via Developer Studio AI.">
+            <meta name="robots" content="index, follow">
+            <meta property="og:title" content="Build a Puzzle Piece Connect Hover (Source Code)">
+            <meta property="og:description" content="A beautiful component imported via Developer Studio AI.">
+            <meta property="og:image" content="https://codescompiler.com/images/posts/css-puzzle-piece-hover.png">
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Build a Puzzle Piece Connect Hover (Source Code)">
+            <meta name="twitter:description" content="A beautiful component imported via Developer Studio AI.">
+            <meta name="twitter:image" content="https://codescompiler.com/images/posts/css-puzzle-piece-hover.png">
+          </head>
+<body>
+
+<!-- ── CODESCOMPILER DEMO HEADER ── -->
+<style>
+  #cc-demo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 48px;
+    background: #1a1b26;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: white;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999;
+  }
+  #cc-demo-header a { text-decoration: none; color: white; }
+  .cc-logo { font-size: 14px; font-weight: 900; }
+  .cc-logo span { color: #04aa6d; }
+  .cc-sep { width: 1px; height: 20px; background: rgba(255,255,255,0.12); margin: 0 12px; }
+  .cc-title { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.65); flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .cc-actions { display: flex; gap: 8px; }
+  .cc-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    color: rgba(255,255,255,0.7);
+  }
+  .cc-btn:hover { background: rgba(255,255,255,0.15); color: white; }
+  .cc-btn svg { width: 14px; height: 14px; }
+  @media (max-width: 600px) {
+    .cc-title { display: none; }
+    .cc-btn span { display: none; }
+  }
+</style>
+<header id="cc-demo-header">
+  <div style="display: flex; align-items: center; overflow: hidden;">
+    <a href="https://codescompiler.com" class="cc-logo" target="_blank" rel="dofollow"><span>Codes</span>Compiler</a>
+    <div class="cc-sep"></div>
+    <h1 class="cc-title" title="Build a Puzzle Piece Connect Hover (Source Code)" style="margin: 0; font-size: 13px; font-weight: 600;">📺 Build a Puzzle Piece Connect Hover (Source Code)</h1>
+  </div>
+  <div class="cc-actions">
+    <a href="https://codescompiler.com/blog/css-puzzle-piece-hover" class="cc-btn" target="_blank" rel="dofollow" title="Read the full post">
+      <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+      <span>Back to Post</span>
+    </a>
+    <a href="index.html" class="cc-btn" target="_blank" download="css-puzzle-piece-hover.html" title="Download source file">
+      <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+      <span>Download</span>
+    </a>
+    <button onclick="document.getElementById('cc-demo-header').style.display='none'" class="cc-btn" title="Hide header for fullscreen view">
+      <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l5-5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+      <span>Fullscreen</span>
+    </button>
+  </div>
+</header>
+<!-- ================================== -->
+
+  <div class="puzzle-grid">
+    <div class="piece top-left"></div>
+    <div class="piece top-right"></div>
+    <div class="piece btm-left"></div>
+    <div class="piece btm-right"></div>
+    <div class="icon">★</div>
+  </div>
+
+
+</body></html>
